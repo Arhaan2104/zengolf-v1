@@ -1,0 +1,324 @@
+---
+import "../styles/global.css";
+
+const facilityImages = [
+  {
+    title: "Target greens",
+    eyebrow: "Range craft",
+    image: "/assets/target-greens.jpg",
+    copy: "Defined landing zones that make every session measurable, purposeful, and satisfying.",
+  },
+  {
+    title: "Artificial turf bays",
+    eyebrow: "All-weather",
+    image: "/assets/artificial-turf-bays.jpg",
+    copy: "Consistent practice conditions for first-timers, regulars, teams, and coached sessions.",
+  },
+  {
+    title: "Natural turf bays",
+    eyebrow: "Course feel",
+    image: "/assets/natural-turf-bays.jpg",
+    copy: "Real-grass lies for players who want to rehearse the shot they will actually face.",
+  },
+  {
+    title: "Challenge bays",
+    eyebrow: "Play mode",
+    image: "/assets/challenge-bays.jpg",
+    copy: "Social, competitive formats that turn a practice range into a shared experience.",
+  },
+  {
+    title: "Practice bunkers",
+    eyebrow: "Short game",
+    image: "/assets/practice-bunkers.jpg",
+    copy: "Dedicated sand work, recovery shots, and confidence under pressure.",
+  },
+  {
+    title: "Putting and chipping",
+    eyebrow: "Scoring zone",
+    image: "/assets/putting-chipping.jpg",
+    copy: "Precise short-game areas for coaching, warmups, and low-impact repeat practice.",
+  },
+];
+
+const programs = [
+  {
+    title: "For beginners",
+    detail: "A three-month program with unlimited practice, 18 one-to-one lessons, equipment, mentorship, and daily access till 9 PM.",
+  },
+  {
+    title: "For regulars",
+    detail: "Pay-and-play, memberships, and expert coaching for players who want a flexible routine without friction.",
+  },
+  {
+    title: "For corporates",
+    detail: "Boardroom energy moved outdoors: offsites, client days, workshops, and team competitions in a calm premium setting.",
+  },
+  {
+    title: "For hosts",
+    detail: "Private celebrations, golf events, community gatherings, café service, decor, and indoor-outdoor formats.",
+  },
+];
+
+const stats = [
+  ["11", "acres of natural greens"],
+  ["330", "yards of range distance"],
+  ["7", "days open till 9 PM"],
+  ["18", "one-to-one beginner lessons"],
+];
+
+const testimonials = [
+  {
+    quote: "Unique for its golf course like feel. You can practice almost any shot you can visualise.",
+    name: "Pradeep Kant",
+  },
+  {
+    quote: "The place truly feels like a solace in the middle of the hustle bustle of Gurgaon.",
+    name: "Kareena Oberoi",
+  },
+  {
+    quote: "One of the best driving ranges in Gurgaon. The balls and mats are good, and they have indoor golf simulators.",
+    name: "Kumar Savar Malhotra",
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ZEN GOLF is an 11-acre premium golf range, academy, café, event destination, indoor lounge, and Mini Golf platform in Gurugram."
+    />
+    <link rel="icon" href="/assets/zengolf-logo.png" />
+    <title>ZEN GOLF | Golf, Gourmet & Gatherings in Gurugram</title>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="ZEN GOLF home">
+        <img src="/assets/zengolf-logo.png" alt="ZEN GOLF" />
+      </a>
+      <nav>
+        <a href="#range">Range</a>
+        <a href="#programs">Programs</a>
+        <a href="#mini">Mini Golf</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="tel:+919614971497">Book</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="ZEN GOLF hero">
+        <video src="/assets/home-video.mp4" autoplay muted loop playsinline poster="/assets/max-distance.jpg"></video>
+        <div class="hero-scrim"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Gurugram, beside the Aravallis</p>
+          <h1>ZEN GOLF</h1>
+          <p class="hero-copy">
+            Golf, gourmet, gatherings, coaching, indoor simulation, and Mini Golf.
+            A calm 11-acre destination built for first swings, serious practice,
+            corporate days, and city-scale leisure.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="button primary">Reserve a session</a>
+            <a href="#range" class="button ghost">Explore the facility</a>
+          </div>
+        </div>
+        <div class="hero-strip" aria-label="ZEN GOLF quick facts">
+          {stats.map(([value, label]) => (
+            <div>
+              <strong>{value}</strong>
+              <span>{label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="intro section">
+        <div class="section-kicker">Where mindfulness meets golf</div>
+        <h2>
+          A premium golf sanctuary that behaves like a lifestyle platform.
+        </h2>
+        <p>
+          ZEN GOLF was born in Gurgaon as more than a driving range: a green
+          refuge for self-discovery, community, celebration, coaching, café
+          culture, and corporate experiences.
+        </p>
+      </section>
+
+      <section class="range-story" id="range">
+        <div class="range-copy">
+          <p class="eyebrow">11 acres. Natural greens. Aravalli backdrop.</p>
+          <h2>Built to feel closer to a course than a cage.</h2>
+          <p>
+            The range pairs serious practice infrastructure with hospitality-grade
+            arrival, food, coaching, and social programming.
+          </p>
+          <dl>
+            <div><dt>Range</dt><dd>330-yard max distance</dd></div>
+            <div><dt>Surface</dt><dd>Artificial and natural turf bays</dd></div>
+            <div><dt>Practice</dt><dd>Target greens, bunkers, putting, chipping</dd></div>
+            <div><dt>Level</dt><dd>Separate spaces for pros and new golfers</dd></div>
+          </dl>
+        </div>
+        <div class="range-image">
+          <img src="/assets/max-distance.jpg" alt="ZEN GOLF driving range with long distance greens" />
+        </div>
+      </section>
+
+      <section class="section facilities">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Facility surfaces</p>
+            <h2>Every practice mode, composed into one calm system.</h2>
+          </div>
+          <p>
+            A range that lets beginners learn safely, regulars rehearse with
+            intent, and events move naturally from play to food to conversation.
+          </p>
+        </div>
+        <div class="facility-grid">
+          {facilityImages.map((item) => (
+            <article class="facility">
+              <img src={item.image} alt={`ZEN GOLF ${item.title}`} />
+              <div>
+                <span>{item.eyebrow}</span>
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="programs" id="programs">
+        <div class="section-kicker">Player pathways</div>
+        <h2>From first-timer to founder offsite.</h2>
+        <div class="program-grid">
+          {programs.map((program, index) => (
+            <article>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{program.title}</h3>
+              <p>{program.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="mini" id="mini">
+        <div class="mini-copy">
+          <p class="eyebrow">Spin-off format</p>
+          <h2>ZEN GOLF MINI brings the brand into malls, rooftops, and high streets.</h2>
+          <p>
+            Mini Golf takes the ZEN GOLF standard into smaller urban footprints:
+            social, photogenic, all-ages, operationally light, and built for
+            premium retail destinations.
+          </p>
+          <div class="mini-specs">
+            <span>3,000-8,000 sq. ft.</span>
+            <span>Indoor or outdoor</span>
+            <span>Turnkey operation</span>
+          </div>
+        </div>
+        <div class="mini-gallery" aria-label="Mini Golf photo gallery">
+          <img src="/assets/mini_golf_closeup.jpg" alt="Mini Golf putter near a hole" />
+          <img src="/assets/mini_golf_person.jpg" alt="Mini Golf player on an artificial green" />
+          <img src="/assets/mini_golf_putters.jpg" alt="Mini Golf putters and balls" />
+        </div>
+      </section>
+
+      <section class="events" id="events">
+        <div>
+          <p class="section-kicker">Gatherings</p>
+          <h2>Celebrate, connect, and tee off in style.</h2>
+          <p>
+            Private milestones, golf hangouts, community events, creative
+            workshops, client days, and corporate offsites with indoor and
+            outdoor options.
+          </p>
+        </div>
+        <div class="event-lines">
+          <span>Private events</span>
+          <span>Golf events</span>
+          <span>Community events</span>
+          <span>Corporate workshops</span>
+          <span>Café and gourmet service</span>
+          <span>Indoor lounge and simulators</span>
+        </div>
+      </section>
+
+      <section class="testimonials section">
+        <div class="section-head compact">
+          <div>
+            <p class="section-kicker">Client signal</p>
+            <h2>What regulars remember.</h2>
+          </div>
+        </div>
+        <div class="quote-grid">
+          {testimonials.map((item) => (
+            <figure>
+              <blockquote>{item.quote}</blockquote>
+              <figcaption>{item.name}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact-copy">
+          <p class="eyebrow">Book ZEN GOLF</p>
+          <h2>Step out of the city without leaving Gurugram.</h2>
+          <p>
+            Reserve practice, coaching, a corporate day, an event, or a Mini Golf
+            partnership conversation.
+          </p>
+          <address>
+            <a href="tel:+919614971497">+91 9614971497</a>
+            <a href="mailto:swing@zengolf.in">swing@zengolf.in</a>
+            <span>SEZ Rd, near Ascendas IT Park, near Optum, Alahawas, Sector 59, Gurugram, Haryana 122102</span>
+          </address>
+        </div>
+        <form name="ZEN GOLF enquiry" aria-label="ZEN GOLF enquiry form">
+          <label>
+            <span>Name</span>
+            <input name="name" autocomplete="name" />
+          </label>
+          <label>
+            <span>Phone</span>
+            <input name="phone" autocomplete="tel" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" />
+          </label>
+          <label>
+            <span>Interest</span>
+            <select name="interest">
+              <option>Practice or coaching</option>
+              <option>Corporate event</option>
+              <option>Private event</option>
+              <option>ZEN GOLF MINI partnership</option>
+            </select>
+          </label>
+          <label class="full">
+            <span>Message</span>
+            <textarea name="message" rows="4"></textarea>
+          </label>
+          <button type="submit">Submit enquiry</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <img src="/assets/zengolf-logo.png" alt="ZEN GOLF" />
+      <p>Copyright © 2026 Zenpolis Pvt Ltd.</p>
+      <div>
+        <a href="#range">Range</a>
+        <a href="#mini">Mini Golf</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+  </body>
+</html>
